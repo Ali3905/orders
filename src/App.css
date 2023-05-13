@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #fffafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App.js  */
+
+.container{
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left_container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-between; */
+  padding: 0 20px;
+  /* width: 100%;  */
+  margin-top: 80px;
+}
+
+.card_container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  /* height: 30vh;
+  align-self: center; */
+}
+
+@media screen and (max-width: 768px) {
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 60vh;
+}
+.container{
+  justify-content: flex-start;
+}
+
+}
+
+/* Sideabar */
+
+.sidebar{
+  background-color: white;
+  width: 20vw;
+  height: 100vh;
+  padding: 20px 0;
+  position: absolute;
+  left: 0;
+}
+
+.sidebar h1{
+  margin: 2px 35px;
+}
+
+.sidebar li{
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  padding: 10px 40px;
+}
+
+.sidebar li:hover{
+  background-color: #ffc8c8;
+  border-left: 4px solid #ff4b4b;
+}
+
+.sidebar li .icon{
+  margin-right: 10px;
+}
+
+.cancel{
+  float: right;
+  position: relative; 
+   bottom: 15px;
+  right: 15px;
+}
+
+.menu{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+.sidebar{
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+}
+
+/* Navbar */
+
+.navbar{
+  display: flex;
+  justify-content: end;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  padding: 0 40px;
+}
+
+.navbar ul{
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.navbar ul li{
+  list-style: none;
+  padding: 10px 15px;
+  border-right: 1px solid black;
+}
+
+.navbar ul li:last-child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: none;
+  width: 100%;
+}
+
+.frame_icon{
+  width: 40px ;
+  height: 40px ;
+  border-radius: 50px;
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  
+.navbar{
+  display: flex;
+  justify-content: end;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  padding: 0 100px;
+}
+
+  }
+
+/* Card */
+
+.card{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  /* background-color: #fff; */
+  padding: 20px 20px;
+  /* height: 20vh;
+  width: 20vw; */
+}
+.card:nth-child(1){
+  background-color: #fffcb5;
+}
+.card:nth-child(2){
+  background-color: #caffaa;
+}
+.card:nth-child(3){
+  background-color: #a2abf1;
 }
 
-.App-link {
-  color: #61dafb;
+.card div{
+  padding: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card img{
+  
+  width: 50px;
+  padding: 8px 8px;
+}
+
+.card_icon{
+  border-radius: 50px;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 8px 8px;
+}
+
+.text{
+  text-align: center;
+}
+
+.text p{
+  font-size: 28px;
+  font-weight: bold;
+}
+.text h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Orders */
+
+.orders{
+  margin-top: 40px;
+}
+
+.orders h2{
+  margin-bottom: 20px;
 }
